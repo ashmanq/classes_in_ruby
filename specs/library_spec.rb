@@ -69,5 +69,11 @@ class TestLibrary < MiniTest::Test
     assert_equal("02/02/12", result[:date])
   end
 
+  def test_add_new_book()
+    @library.add_new_book("Catch_22")
+    books = @library.books()
+    assert_equal(4, books.length)
+  end
+
 
 end
