@@ -59,6 +59,10 @@ class TestLibrary < MiniTest::Test
     assert_equal(books, @library.books())
   end
 
+  def test_get_book_index_no()
+    assert_equal(0, @library.get_book_index_no("lord_of_the_rings"))
+  end
+
   def test_get_book_info_using_title()
     result = @library.get_book_info_using_title("the_hitchhikers_guide_to_the_galaxy")
     assert_equal("Ford", result[:rental_details][:student_name])
@@ -83,6 +87,7 @@ class TestLibrary < MiniTest::Test
         date: "01/01/20"
       }
     }
+    
   @library.update_book_rental_details(new_book_details)
   result = @library.get_book_info_using_title("lord_of_the_rings")
 
