@@ -72,7 +72,21 @@ class TestLibrary < MiniTest::Test
   def test_add_new_book()
     @library.add_new_book("Catch_22")
     books = @library.books()
-    assert_equal(4, books.length)
+    assert_equal(4, books.length) #checks length of book array
+  end
+
+  def test_change_book_rental_details()
+    new_book_details = {
+      title: "lord_of_the_rings",
+      rental_details: {
+        student_name: "Jason Stratham",
+        date: "01/01/20"
+      }
+    }
+  @library.update_book_rental_details(new_book_details)
+  result = @library.get_book_info_using_title("lord_of_the_rings")
+
+  assert_equal(new_book_details, result)
   end
 
 
