@@ -36,4 +36,14 @@ class TestSportsTeam < MiniTest::Test
     assert_equal(true, @team.search_player("Maria"))
   end
 
+  def test_team_points_change__win()
+    @team.team_points_change("win")
+    assert_equal(1, @team.points())
+  end
+
+  def test_team_points_change__lost()
+    @team.team_points_change("lost")
+    assert_equal(0, @team.points())
+  end
+
 end
