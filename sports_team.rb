@@ -1,23 +1,27 @@
+# frozen_string_literal: true
+
 class SportsTeam
+  def initialize(name, players, coach)
+    @name = name
+    @players = players
+    @coach = coach
+  end
 
-def initialize(name, players, coach)
-  @name = name
-  @players = players
-  @coach = coach
-end
+  # Getters
+  def get_name
+    @name
+  end
 
-#Getters
-def get_name
-  return @name
-end
+  def get_players
+    @players
+  end
 
-def get_players
-  return @players
-end
+  def get_coach
+    @coach
+  end
 
-def get_coach
-  return @coach
-end
-
-
+  # Setters
+  def set_coach(name)
+    @coach = name
+  end
 end
