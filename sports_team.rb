@@ -10,21 +10,7 @@ class SportsTeam
     @coach = coach
   end
 
-  # # Getters
-  # def get_name
-  #   @name
-  # end
-  #
-  # def get_players
-  #   @players
-  # end
-  #
-  # def get_coach
-  #   @coach
-  # end
-  #
-  # # Setters
-  # def set_coach(name)
-  #   @coach = name
-  # end
+  def add_player(player)
+    @players.push(player)
+  end
 end
