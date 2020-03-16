@@ -27,5 +27,9 @@ class TestStudent < MiniTest::Test
     assert_equal("G20", @student.get_cohort())
   end
 
+  def test_set_message()
+    assert_equal("I can talk!", @student.get_message())
+  end
+
 
 end

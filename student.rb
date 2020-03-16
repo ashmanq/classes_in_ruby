@@ -12,6 +12,9 @@ class Student
   def get_cohort()
     return @cohort
   end
+  def get_message()
+    return "I can talk!"
+  end
 
   def set_name(name)
     @name = name
