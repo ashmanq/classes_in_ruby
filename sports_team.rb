@@ -18,9 +18,10 @@ class SportsTeam
 
   def search_player(player)
     if (@players.find_index(player) == nil)
-      return nil
+      return false
+    else
+      return true
     end
-    return true
   end
 
   def team_points_change(game_result)
