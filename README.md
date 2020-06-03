@@ -1,5 +1,5 @@
 # Classes in Ruby
-The purpose of this repository was to demonstrate the following:
+The purpose of this app was to demonstrate the following:
 * Creating classes
 * Creating multiple objects
 * Add properties to objects
